@@ -10,7 +10,7 @@ LMPO
 > CUDA_VISIBLE_DEVICES=0 python main_mbpo.py --env_name 'Humanoid-v2' --num_epoch 400 --exp_name humanoid_lmpo --reweight_model decay --reweight_rollout decay
 
 ## code structure
-During training, 'exp' folder will created aside 'lbpo' folder.
+During training, 'exp' folder will created aside 'lmpo' folder.
 
 ## Dependencies
 MuJoCo 1.5 & MuJoCo 2.0
