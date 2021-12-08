@@ -1,18 +1,16 @@
 ## Overview
-weighted mbpo
+Lifetime-decay Model-based Policy Optimization
 
 ## Usage
-> CUDA_VISIBLE_DEVICES=2 python main_mbpo.py --env_name 'Humanoid-v2' --num_epoch 400 --exp_name humanoid_mbpo_0
 
-> CUDA_VISIBLE_DEVICES=0 python main_mbpo.py --env_name 'Humanoid-v2' --num_epoch 400 --exp_name humanoid_reweight_model_rollout_dc96_0 --reweight_model decay --reweight_rollout decay
+MBPO:
+> CUDA_VISIBLE_DEVICES=0 python main_mbpo.py --env_name 'Humanoid-v2' --num_epoch 400 --exp_name humanoid_mbpo
 
-
-> python draw_results.py
-
-> jupyter notebook draw_render.ipynb
+LMPO
+> CUDA_VISIBLE_DEVICES=0 python main_mbpo.py --env_name 'Humanoid-v2' --num_epoch 400 --exp_name humanoid_lmpo --reweight_model decay --reweight_rollout decay
 
 ## code structure
-During training, 'exp' folder will created aside 'wmbpo' folder.
+During training, 'exp' folder will created aside 'lbpo' folder.
 
 ## Dependencies
 MuJoCo 1.5 & MuJoCo 2.0
